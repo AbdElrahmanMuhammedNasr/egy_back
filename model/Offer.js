@@ -15,7 +15,7 @@ const OfferSchema = Schema({
         type: String,
         require: true
     },
-    exData: {
+    exDate: {
         type: Date,
         require: true
     }, oldPrice: {

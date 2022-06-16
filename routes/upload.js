@@ -1,6 +1,5 @@
 const multer = require('multer')
 const fs = require('fs');
-// const router = require('./Order/Order');
 const upload = multer({ dest: 'uploads/' })
 const router = require('express').Router()
 

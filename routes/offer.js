@@ -3,8 +3,8 @@ const Offer = require('../model/Offer')
 
 router.post("/add-offer", async (req, res) => {
     try {
-        const { images, title, subtitle, exData, oldPrice, newPrice } = req.body
-        const offer = new Offer({ images, title, subtitle, exData, oldPrice, newPrice })
+        const { images, title, subtitle, exDate, oldPrice, newPrice } = req.body
+        const offer = new Offer({ images, title, subtitle, exDate, oldPrice, newPrice })
         const result = await offer.save()
         res.status(200).json(result)
     } catch (error) {
@@ -13,7 +13,7 @@ router.post("/add-offer", async (req, res) => {
     }
 
 })
-router.get("/get-offer", async (req, res) => {
+router.get("/get-offers", async (req, res) => {
     try {
         const result = await Offer.find()
         res.status(200).json(result)

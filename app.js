@@ -34,6 +34,7 @@ const partner = require('./routes/partner')
 const project = require('./routes/project')
 const slider = require('./routes/slider')
 const testmon = require('./routes/testmon')
+const service = require('./routes/service')
 const upload = require('./routes/upload')
 
 
@@ -44,6 +45,7 @@ app.use('/partner', partner);
 app.use('/project', project);
 app.use('/slider', slider);
 app.use('/testmon', testmon);
+app.use('/service', service);
 app.use('/upload', upload);
 
 

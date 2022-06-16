@@ -3,15 +3,15 @@ const Project = require('../model/project')
 
 router.post("/add-project", async (req, res) => {
     try {
-        const { images, name, link } = req.body
-        const project = new Project({ images, name, link })
+        const { images, name, link ,section} = req.body
+        const project = new Project({ images, name, link ,section})
         const result = await project.save()
         res.status(200).json(result)
     } catch (error) {
 
     }
 })
-router.get("/get-project", async (req, res) => {
+router.get("/get-projects", async (req, res) => {
     try {
         const result = await Project.find()
         res.status(200).json(result)
