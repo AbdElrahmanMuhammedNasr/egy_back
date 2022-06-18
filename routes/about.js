@@ -4,6 +4,12 @@ const About = require('../model/About')
 router.put("/update-about", async (req, res) => {
     try {
         const { title } = req.body;
+        const about = await About.findOne({});
+        if (about == null) {
+            const about = new About({ title })
+            await about.save();
+            res.status(200).json(about)
+        }
         const result = await About.updateMany({}, { title })
         res.status(200).json(result)
     } catch (error) {
