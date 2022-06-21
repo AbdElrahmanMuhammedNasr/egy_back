@@ -52,8 +52,8 @@ app.use('/upload', upload);
 // mongodb+srv://abdoNasr:<password>@cluster0.vf0qx.mongodb.net/?retryWrites=true&w=majority
 
 // mongodb://172.17.0.2:27017/egy
-// mongoose.connect('mongodb+srv://abdoNasr:123456789Abdo@cluster0.vf0qx.mongodb.net/Egy?retryWrites=true&w=majority', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
-mongoose.connect('mongodb://172.17.0.2:27017/egy', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://abdoNasr:123456789Abdo@cluster0.vf0qx.mongodb.net/Egy?retryWrites=true&w=majority', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
+// mongoose.connect('mongodb://172.17.0.2:27017/egy', { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true })
     .then(result => {
         server.listen(port)
         console.log("ok")
