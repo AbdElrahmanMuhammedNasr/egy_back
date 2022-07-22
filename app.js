@@ -29,6 +29,7 @@ app.use(express.json())
 
 
 const about = require('./routes/about')
+const section = require('./routes/section')
 const offer = require('./routes/offer')
 const partner = require('./routes/partner')
 const project = require('./routes/project')
@@ -40,6 +41,7 @@ const upload = require('./routes/upload')
 
 
 app.use('/about', about);
+app.use('/section', section);
 app.use('/offer', offer);
 app.use('/partner', partner);
 app.use('/project', project);
